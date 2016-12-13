@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <string.h>
+
 char findTheDifference(char* s, char* t) {
     char diffChar;
     int i;
@@ -12,4 +15,14 @@ char findTheDifference(char* s, char* t) {
     }
 
     return diffChar;
+}
+
+int main(int argc, char *argv[]) {
+    
+    char str1[] = "abcd";
+    char str2[] = "abcde";
+
+    printf("%c\n", findTheDifference(str1, str2));
+
+    return 0;
 }

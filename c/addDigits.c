@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int addDigits(int num) {
     
     while (num > 9) {
@@ -5,4 +7,9 @@ int addDigits(int num) {
     }
     
     return num;
+}
+
+int main(int argc, char *argv[]) {
+    printf("%d\n", addDigits(38));
+    return 0;
 }

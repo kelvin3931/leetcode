@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 char** fizzBuzz(int n, int* returnSize) {
     char **str;
     int i;
@@ -26,4 +30,18 @@ char** fizzBuzz(int n, int* returnSize) {
 
     *returnSize=n;
     return str;
+}
+
+int main(int argc, char *argv[]) {
+
+    char **result;
+    int i;
+    int returnSize[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+    result = fizzBuzz(15, returnSize);
+
+    for ( i = 0 ; i < 15; i++) {
+        printf("%s\n", *(result+i));
+    }
+
+    return 0;
 }
