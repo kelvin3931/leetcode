@@ -52,10 +52,10 @@ int main() {
 
     test_insert(head, 4);
     
-/*    insert_tree(&head, 0);
+    insert_tree(&head, 0);
     insert_tree(&head, 5);
     insert_tree(&head, 2);
-    insert_tree(&head, 3);*/
+    insert_tree(&head, 3);
     insert_tree(&head, 1);
 
     DFS(head);
