@@ -32,6 +32,24 @@ public class binaryTree {
         }
         
         b.DFS(root);
+        b.BFS(root);
+    }
+
+    public void BFS(Node root) {
+        List<Node> queue = new LinkedList<>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node n = queue.remove(0);
+
+            if (n.left != null)
+                queue.add(n.left);
+            if (n.right != null)
+                queue.add(n.right);
+            
+            System.out.print(" " + n.data);
+        }
     }
     
     public void DFS(Node root) {
