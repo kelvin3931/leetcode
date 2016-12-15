@@ -38,6 +38,9 @@ public class binaryTree {
     public void BFS(Node root) {
         List<Node> queue = new LinkedList<>();
 
+        if (root == null) 
+            return;
+
         queue.add(root);
 
         while (!queue.isEmpty()) {
