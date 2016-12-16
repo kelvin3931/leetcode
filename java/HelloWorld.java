@@ -29,7 +29,8 @@ public class HelloWorld {
         System.gc();
         Runtime r=Runtime.getRuntime();
         r.freeMemory();
-        
+
+        System.out.println(interleave(123, 123));
     }
     
     public static int fab(int num) {
@@ -92,5 +93,44 @@ public class HelloWorld {
 
         System.out.println(result);
         return result;
+    }
+
+        public static int interleave(int A, int B) {
+        int result;
+        int commonLen, remainLen;
+        int i;
+        boolean isBiger;
+        result = 0;
+        
+        String strA = String.valueOf(A);
+        String strB = String.valueOf(B);
+        String strC = new String();
+        
+        if (strA.length() > strB.length()) {
+            commonLen = strB.length();
+            remainLen = strA.length() - strB.length();
+            isBiger = true;
+        }
+        else {
+            commonLen = strA.length();
+            remainLen = strB.length() - strA.length();
+            isBiger = false;
+        }
+
+        for( i = 0; i < commonLen; i++) {
+            strC = strC + strA.charAt(i) + strB.charAt(i);
+        }
+        
+        for( i = 0; i < remainLen; i++) {
+            if (isBiger) {
+                strC = strC + strA.charAt(i+commonLen);
+            } else {
+                strC = strC + strB.charAt(i+commonLen);
+            }
+        }
+        
+        System.out.println(strC);
+        
+        return Integer.parseInt(strC);
     }
 }
