@@ -1,0 +1,3 @@
+[submodule "vimrc"]
+	path = vimrc
+	url = https://github.com/kelvin3931/vimrc
