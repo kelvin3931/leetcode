@@ -5,7 +5,7 @@ CFLAGS = -O0 -g3 -Wall -static
 
 DIST = ubuntu
 
-all : invertTree isSameTree
+all : invertTree isSameTree reverse
 
 invertTree.o : invertTree.c
 	$(CC) -c invertTree.c $(CFLAGS)
@@ -18,6 +18,12 @@ isSameTree.o : isSameTree.c
 
 isSameTree : isSameTree.o
 	$(CC) -o isSameTree isSameTree.c $(CFLAGS)
+
+reverse.o : reverse.c
+	$(CC) -c reverse.c $(CFLAGS)
+
+reverse : reverse.o
+	$(CC) -o reverse reverse.c $(CFLAGS)
 
 clean:
 	rm -f *.o
