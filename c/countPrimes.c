@@ -26,6 +26,6 @@ int countPrimes(int n) {
 
 int main() {
     
-    printf("%d", countPrimes(1500000));
+    printf("%d", countPrimes(7));
     return 0;
 }
